@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bind</title>
+
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+	<div id="app">
+		<div class="box">
+		  	<article class="media">
+				<button 
+				class="button is-link is-rounded" 
+				title="YAY!!! :D - título do botão"
+				style="margin: 1%;">Passe o mouse sobre o botão
+				</button>
+			</article>
+			
+			<article class="media">
+				<button 
+				class="button is-primary is-rounded" 
+				title="titulo"
+				style="margin: 1%;">Passe o mouse sobre o botão
+				</button>
+			</article>
+
+			<article class="media">
+				<button 
+				class="button is-success is-rounded" 
+				v-bind:title="titulo"
+				style="margin: 1%;">Passe o mouse sobre o botão
+				</button>
+			</article>
+
+			<article class="media">
+				<button 	
+				class="button is-danger is-rounded" 
+				:title="title"
+				style="margin: 1%;">Passe o mouse sobre o botão
+				</button>
+			</article>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript"></script>
+</head>
+<body>
+
+<style type="text/css">
+
+	.box {
+		width: 30%;
+		margin: 1%;
+	}
+
+	article {
+		display: flex;
+		align-items: center;
+		margin: auto;
+		width: 70%;
+		
+	}
+
+	button {
+		display:inline;
+		margin: auto;
+	}
+</style>
+</body>
+</html>
