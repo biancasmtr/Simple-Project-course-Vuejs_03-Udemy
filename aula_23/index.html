@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://unpkg.com/vue"></script>
+	<title>Bulma</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+
+
+	<div id="app">
+
+		<button @click="showModal = true">Mostrar Modal</button>
+
+		<modal v-show="showModal" @meuclickfechar="showModal = false" style="text-align: center;">
+			Mostrar o modal com a tag slot
+		</modal>
+
+
+	</div>
+
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript"></script>
+</body>
+</html>

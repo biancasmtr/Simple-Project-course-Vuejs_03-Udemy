@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://unpkg.com/vue"></script>
+	<title>Bulma</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+
+	<div id="app">
+
+		<button @click="showModal = true">Mostrar Modal</button>
+
+		<modal v-show="showModal" @meuclickfechar="showModal = false" style="text-align: center;">
+			<h1 slot="header">Este é o título do meu novo modal</h1>
+
+			Aqui vai o corpo do meu slot padrão.
+
+			<p slot="footer" style="text-align: center !important;">Aqui está indo um conteúdo de rodapé</p>
+		</modal>
+
+
+	</div>
+
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript"></script>
+</body>
+</html>

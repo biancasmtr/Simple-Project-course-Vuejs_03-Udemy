@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bind</title>
+
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+	<div id="app" class="content" style="text-align: center; margin: 2%; float: left;">
+		<div class="box">
+			<article class="media">
+				<ol class="is-upper-roman">
+				<li v-for="fruit in fruits"> {{fruit.name}} </li>
+				</ol>
+			</article>
+
+			<article class="media">
+				<div class="field">
+					<div class="control">
+						<input v-model="fruits.name"
+						style=" margin-right: 2%;" 
+						class="input is-small" 
+						type="text" 
+						placeholder="Adione a fruta"
+						id="fruta" name="fruta" >
+					</div>
+				</div>
+			</article>
+
+			<article class="media">
+				<a 
+				class="button is-dark" 
+				@click="addFruta" 
+				style="margin-left: auto; margin-right: auto; width: 10em;"
+				v-bind:disabled="isValid"> Adicionar Fruta</a>
+			</article>
+		</div>
+
+	</div>
+
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript"></script>
+</head>
+<body>
+
+</body>
+</html>
