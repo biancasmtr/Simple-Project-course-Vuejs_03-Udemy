@@ -1,6 +1,3 @@
-Vue.component('',{
-	template: ''
-});
 
 var app = new Vue({
 	el: '#app',
@@ -12,17 +9,24 @@ var app = new Vue({
 		{name: 'manga'},
 		{name: 'pineapple'},
 		],
-		fruta: ''
+		fruta: '',
+		clicou: false
 	},
 	methods: {
 		addFruta: function() {
 			var name = this.fruits.length + 1;
-			this.fruits.push({ fruit: name.value});
+			this.fruits.push({ name: fruta.value });
 		},
 	},
 	computed: {
 	    isValid: function () {
-	        return this.fruits == '';
+	        return this.fruta == '';
+	    },
+
+	    preenchido: function() {
+	    	if (fruta == '') {
+
+	    	}
 	    }
-	}
+    }
 }); 
